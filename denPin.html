@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thực hành đèn pin</title>
+</head>
+<body>
+    <script>
+      function Battery() {
+          this.setEnnergy=function (ennergy) {
+              this.ennergy=ennergy;
+          }
+          this.getEnnergy=function () {
+              return this.ennergy;
+          }
+          this.deceaseEnnergy=function () {
+              if (this.ennergy>0) {
+                  this.ennergy--;
+              }
+          }
+      }
+      function Flashlamp() {
+          this.setBattery=function (battery) {
+              this.battery=battery;
+          };
+          this.getBattery=function () {
+              return this.battery.getEnnergy();
+          };
+          this.light=function () {
+              if (this.status){
+                  alert("Lingting");
+              } else {
+                  alert("Not lingting");
+              }
+          };
+          this.turnOn=function () {
+              this.status=truwe;
+          };
+          this.turnOff=function () {
+              this.status=false;
+          };
+      }
+        let battery=new Battery();
+      battery.setEnnergy(10);
+      console.log("Lingting");
+      console.log(battery.getEnnergy());
+      let flashlanp=new Flashlamp();
+      flashlanp.getBattery();
+      console.log("lingting");
+
+      console.log("turnOn the lamp");
+      flashlanp.turnOn();
+      flashlanp.light();
+      battery.deceaseEnnergy();
+
+      console.log("turn off the lamp");
+      flashlanp.turnOff();
+      flashlanp.light();
+
+
+
+
+
+    </script>
+</body>
+</html>
